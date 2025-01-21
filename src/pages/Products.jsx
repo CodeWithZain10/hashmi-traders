@@ -9,7 +9,7 @@ const Products = () => {
   return (
     <>
       <div className="w-full flex justify-between p-2 ">
-        <SearchBar /> 
+        <SearchBar />
         <button
           onClick={() => navigate("/add-product")}
           className="text-xl bg-orange-500 p-2 rounded-lg mr-4"

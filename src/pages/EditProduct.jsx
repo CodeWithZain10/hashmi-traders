@@ -23,7 +23,7 @@ const EditProduct = () => {
         [e.target.name]: e.target.value,
       })
     );
-  };  
+  };
 
   const handleUpdate = async () => {
     try {
