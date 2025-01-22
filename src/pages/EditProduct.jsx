@@ -9,6 +9,7 @@ import {
 } from "../redux/features/products/productsSlice";
 import { doc, getDoc, updateDoc } from "firebase/firestore";
 import { db } from "../firebase/firebase";
+import toast from "react-hot-toast";
 
 const EditProduct = () => {
   const { id } = useParams();
@@ -37,8 +38,9 @@ const EditProduct = () => {
         variants: currentProduct.variants,
         weight: currentProduct.weight,
       });
-      console.log("Product updated successfully");
+
       navigate("/products");
+      toast.success("Product updated successfully");
     } catch (error) {
       console.error("Error updating product:", error);
     }
@@ -70,7 +72,7 @@ const EditProduct = () => {
   return (
     <>
       <div className="px-6 py-4 bg-gray-800 text-black rounded-lg shadow-lg max-w-4xl mx-auto">
-        <h1 className="font-bold text-3xl text-white mb-6">Add Product</h1>
+        <h1 className="font-bold text-3xl text-white mb-6">Edit Product</h1>
         <div className="space-y-6">
           <div className="flex items-center gap-4">
             <label className="text-white w-1/4">Product Name:</label>

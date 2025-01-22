@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 const Drawer = ({ onClose }) => {
   return (
-    <div className="fixed inset-0 flex">
+    <div className="fixed inset-0 flex z-50">
       {/* Overlay */}
       <div className="w-full bg-black opacity-50" onClick={onClose}></div>
 

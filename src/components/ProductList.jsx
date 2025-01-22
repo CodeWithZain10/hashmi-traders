@@ -63,42 +63,42 @@ const ProductList = () => {
   if (loading) return <Spinner />; // Show the loading spinner when loading is true
 
   return (
-    <div className="flex justify-start flex-wrap gap-10">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
       {products.length > 0 ? (
         filteredItems.map((product) => (
           <div
-            className="bg-gray-700 w-[350px] h-[170px] rounded-lg p-4"
+            className="bg-gray-700 p-4 rounded-lg shadow-md"
             key={product.id}
           >
-            <div className="flex justify-between items-center ">
-              <h1 className="text-2xl font-semibold text-white mb-3">
+            <div className="flex justify-between items-center mb-3">
+              <h1 className="text-2xl font-semibold text-white">
                 {product.name}
               </h1>
               <h3 className="text-white font-semibold text-md">
                 Quantity: {product.quantity}
               </h3>
             </div>
-            <div className="flex justify-evenly text-white  ">
-              <p className="font-semibold text-md">
+            <div className="flex justify-between text-white">
+              <p className="font-semibold text-sm">
                 Retail: {product.retailPrice}
               </p>
-              <p className="font-semibold text-md">
+              <p className="font-semibold text-sm">
                 Wholesale: {product.wholesalePrice}
               </p>
-              <p className="font-semibold text-md">
+              <p className="font-semibold text-sm">
                 Purchase: {product.purchasePrice}
               </p>
             </div>
-            <div className="flex justify-center gap-4 mt-10">
+            <div className="flex justify-center gap-4 mt-4">
               <button
                 onClick={() => handleEdit(product.id)}
-                className="bg-blue-500 w-[90px] h-[30px] text-center rounded-md"
+                className="bg-blue-500 px-3 py-1 text-sm rounded-md hover:bg-blue-600"
               >
                 Edit
               </button>
               <button
                 onClick={() => handleDelete(product.id)}
-                className="bg-red-500 w-[90px] h-[30px] text-center rounded-md"
+                className="bg-red-500 px-3 py-1 text-sm rounded-md hover:bg-red-600"
               >
                 Delete
               </button>

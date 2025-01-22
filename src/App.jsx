@@ -14,6 +14,7 @@ import Sales from "./pages/Sales";
 import Error404 from "./pages/Error404";
 import AddProduct from "./pages/AddProduct";
 import EditProduct from "./pages/EditProduct";
+import AddProductsForBill from "./pages/AddProductsForBill";
 
 const App = () => {
   const router = createBrowserRouter(
@@ -25,6 +26,7 @@ const App = () => {
         <Route path="/sales" element={<Sales />} />
         <Route path="/invoice" element={<Invoice />} />
         <Route path="/add-product" element={<AddProduct />} />
+        <Route path="/add-product-for-bill/" element={<AddProductsForBill />} />
         <Route path="/edit-product/:id" element={<EditProduct />} />
         <Route path="*" element={<Error404 />} />
       </Route>
