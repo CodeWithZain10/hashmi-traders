@@ -27,8 +27,8 @@ const ProductList = () => {
         id: doc.id,
         ...doc.data(),
       }));
-      dispatch(setProducts(productList)); // Dispatch products
-      dispatch(setLoading(false)); // Set loading to false after fetching
+      dispatch(setProducts(productList));
+      dispatch(setLoading(false));
     } catch (error) {
       console.error("Failed to fetch products:", error);
       dispatch(setLoading(false)); // Handle errors and stop loading
