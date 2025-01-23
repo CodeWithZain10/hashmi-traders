@@ -4,6 +4,7 @@ import { addProduct } from "../redux/features/products/productsSlice";
 import { db } from "../firebase/firebase";
 import { collection, addDoc, doc } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
 
 const AddProduct = () => {
   const dispatch = useDispatch();
