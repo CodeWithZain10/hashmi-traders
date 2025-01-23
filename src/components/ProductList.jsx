@@ -18,6 +18,8 @@ const ProductList = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
+  console.log(products);
+
   const fetchProducts = useCallback(async () => {
     try {
       dispatch(setLoading(true));
