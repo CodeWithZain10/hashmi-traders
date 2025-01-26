@@ -32,7 +32,11 @@ const Drawer = ({ onClose }) => {
           <NavLink to={"/sales"} className="cursor-pointer" onClick={onClose}>
             Sales
           </NavLink>
-          <NavLink to={"/invoice"} className="cursor-pointer" onClick={onClose}>
+          <NavLink
+            to={"/all-invoices"}
+            className="cursor-pointer"
+            onClick={onClose}
+          >
             Invoice
           </NavLink>
         </ul>
